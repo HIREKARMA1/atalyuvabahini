@@ -561,92 +561,195 @@
       color: var(--navy)
     }
 
-    .contact {
+    .collab-intro {
       background: var(--pale)
     }
 
-    .contact-grid {
+    .collab-card-grid {
       display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 50px
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px
     }
 
-    .contact-info h2 {
-      font-size: 2.6rem;
-      line-height: 1.12;
-      color: var(--navy);
-      margin: 0 0 18px
-    }
-
-    .contact-info p {
-      color: var(--muted)
-    }
-
-    .contact-line {
-      margin-top: 20px
-    }
-
-    .contact-line strong {
-      display: block;
-      color: var(--navy)
-    }
-
-    .contact-line span {
-      color: var(--muted);
-      font-size: .94rem
-    }
-
-    .contact-form {
+    .collab-card {
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(17, 45, 80, .04)
+      border-radius: 14px;
+      padding: 24px
     }
 
-    .form-grid {
+    .collab-card .icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: #eaf1fa;
+      color: var(--navy);
+      border-radius: 11px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin: 0 0 17px;
+      position: static;
+      border: 0
+    }
+
+    .collab-card h3,
+    .collab-step h3 {
+      color: var(--navy);
+      font-size: 1.08rem;
+      line-height: 1.3;
+      margin: 0 0 9px
+    }
+
+    .collab-card p,
+    .collab-step p,
+    .collab-way p,
+    .collab-accountability p,
+    .collab-details p {
+      color: var(--muted);
+      font-size: .92rem;
+      margin: 0
+    }
+
+    .collab-ways-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px
+      gap: 16px 36px
     }
 
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 6px
+    .collab-way {
+      border-left: 3px solid var(--gold);
+      padding: 4px 0 4px 17px
     }
 
-    .field.full {
-      grid-column: 1/-1
+    .collab-way h3 {
+      color: var(--navy);
+      font-size: 1.05rem;
+      margin: 0 0 5px
     }
 
-    .field label {
-      font-size: .84rem;
-      font-weight: 750;
-      color: #334155
+    .collab-process {
+      background: var(--pale)
     }
 
-    .field input,
-    .field select,
-    .field textarea {
-      width: 100%;
-      padding: 12px 13px;
-      border: 1px solid #d6dee8;
-      border-radius: 8px;
-      font: inherit;
-      color: var(--ink);
-      background: #fff
+    .collab-step-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px
     }
 
-    .field textarea {
-      min-height: 120px;
-      resize: vertical
+    .collab-step {
+      padding: 22px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px
     }
 
-    .form-note {
+    .collab-step-number {
+      color: var(--green);
       font-size: .78rem;
-      color: var(--muted);
-      margin: 13px 0 0
+      font-weight: 850;
+      letter-spacing: .12em
+    }
+
+    .collab-step h3 {
+      margin: 9px 0
+    }
+
+    .collab-accountability-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 48px;
+      align-items: start
+    }
+
+    .collab-accountability h2 {
+      color: var(--navy);
+      font-size: clamp(2rem, 3.4vw, 3rem);
+      line-height: 1.16;
+      letter-spacing: -.035em;
+      margin: 0 0 15px
+    }
+
+    .collab-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0
+    }
+
+    .collab-checklist li {
+      position: relative;
+      padding: 0 0 15px 29px;
+      color: #39495d
+    }
+
+    .collab-checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 900
+    }
+
+    .collab-notice {
+      background: #fff8df;
+      border: 1px solid #f0dfaa;
+      border-radius: 12px;
+      padding: 19px 21px;
+      color: #584716;
+      font-size: .9rem;
+      margin-top: 22px
+    }
+
+    .collab-questions {
+      background: var(--pale)
+    }
+
+    .collab-question-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px
+    }
+
+    .collab-details {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 16px 18px
+    }
+
+    .collab-details summary {
+      color: var(--navy);
+      font-weight: 750;
+      cursor: pointer
+    }
+
+    .collab-details p {
+      margin-top: 12px
+    }
+
+    .collab-details summary:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px
+    }
+
+    .collab-closing {
+      background: var(--navy);
+      color: #fff;
+      text-align: center
+    }
+
+    .collab-closing h2 {
+      color: #fff;
+      font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+      line-height: 1.18;
+      margin: 0 0 12px
+    }
+
+    .collab-closing p {
+      color: #d5e1f0;
+      max-width: 720px;
+      margin: 0 auto
     }
 
     footer {
@@ -716,9 +819,19 @@
         grid-template-columns: repeat(2, 1fr)
       }
 
+      .collab-card-grid,
+      .collab-step-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
       .about-grid,
       .initiative-grid {
         gap: 35px
+      }
+
+      .collab-accountability-grid {
+        grid-template-columns: 1fr;
+        gap: 20px
       }
 
       .stats {
@@ -791,7 +904,6 @@
 
       .about-grid,
       .initiative-grid,
-      .contact-grid,
       .partner-box {
         grid-template-columns: 1fr
       }
@@ -809,6 +921,16 @@
       }
 
       .principle-grid {
+        grid-template-columns: 1fr
+      }
+
+      .collab-card-grid,
+      .collab-step-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .collab-ways-grid,
+      .collab-question-grid {
         grid-template-columns: 1fr
       }
 
@@ -843,12 +965,14 @@
         padding: 19px 10px
       }
 
-      .form-grid {
+      .collab-ways-grid,
+      .collab-question-grid {
         grid-template-columns: 1fr
       }
 
-      .field.full {
-        grid-column: auto
+      .collab-card-grid,
+      .collab-step-grid {
+        grid-template-columns: 1fr
       }
 
       .footer-grid {
@@ -877,8 +1001,8 @@
           BAHINI<small>Seva O Samarpana</small></span></a>
       <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <nav id="mainNav" aria-label="Main navigation"><a href="#about">About</a><a href="#focus">Our Focus</a><a
-          href="#initiatives">Initiatives</a><a href="#approach">Our Approach</a><a href="#contact" class="nav-cta">Get
-          in Touch</a></nav>
+          href="#initiatives">Initiatives</a><a href="#approach">Our Approach</a><a href="#collaboration">Collaboration</a>
+      </nav>
     </div>
   </header>
   <main>
@@ -994,7 +1118,7 @@
           </ul>
           <p><strong>Important:</strong> The proposal describes an intended programme model. Its proposed scale and
             activities should not be presented as completed results unless implementation is verified.</p><a class="btn"
-            href="#contact">Discuss a Collaboration</a>
+            href="#collaboration">Discuss a Collaboration</a>
         </div>
       </div>
     </section>
@@ -1025,60 +1149,186 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="collab-intro" id="collaboration">
       <div class="container">
         <div class="partner-box">
           <div>
-            <p class="kicker">Work With Us</p>
-            <h2>Good work grows through meaningful collaboration.</h2>
+            <p class="kicker">CSR & Philanthropic Collaboration</p>
+            <h2>Good work grows through thoughtful, community-led collaboration.</h2>
             <p>We welcome conversations with community stakeholders, educational institutions, CSR teams, philanthropic
               organisations, and others interested in inclusive community development. Any partnership or funding
-              relationship will be described publicly only once confirmed.</p>
+              relationship would need to be agreed and will be described publicly only once confirmed.</p>
           </div>
-          <div class="partner-links"><a href="#contact">CSR & Philanthropic Collaboration ↗</a><a
-              href="#contact">Institutional Partnerships ↗</a><a href="#contact">Community Engagement ↗</a></div>
+          <div class="partner-links">
+            <a href="#alignment">Potential areas of alignment</a>
+            <a href="#ways-to-collaborate">Ways to collaborate</a>
+            <a href="#responsible-start">A responsible starting point</a>
+          </div>
         </div>
       </div>
     </section>
-    <section class="contact" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-info">
-          <p class="kicker">Contact Us</p>
-          <h2>Let's start a conversation.</h2>
-          <p>Have a question, want to explore a collaboration, or learn more about our work? Reach out using the contact
-            details approved by the organisation.</p>
-          <div class="contact-line"><strong>Organisation</strong><span>Atal Yuva Bahini</span></div>
-          <div class="contact-line"><strong>Location</strong><span>Ganjam District, Odisha, India</span></div>
-          <div class="contact-line"><strong>Email</strong><span>[Add official email address]</span></div>
-          <div class="contact-line"><strong>Phone</strong><span>[Add official contact number]</span></div>
+    <section class="collab-intro" id="alignment">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Potential areas of alignment</p>
+          <h2>Start with community priorities.</h2>
+          <p>Atal Yuva Bahini's stated focus is community development through learning, wellbeing, participation, and
+            access to public-service information. These are areas to explore together, not a list of funded or active
+            projects.</p>
         </div>
-        <form class="contact-form" id="contactForm">
-          <div class="form-grid">
-            <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name"
-                required placeholder="Your name"></div>
-            <div class="field"><label for="organisation">Organisation (optional)</label><input id="organisation"
-                name="organisation" placeholder="Organisation name"></div>
-            <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email"
-                autocomplete="email" required placeholder="you@example.com"></div>
-            <div class="field"><label for="enquiry">Type of enquiry</label><select id="enquiry" name="enquiry" required>
-                <option value="">Choose one</option>
-                <option>General enquiry</option>
-                <option>CSR or philanthropic collaboration</option>
-                <option>Institutional partnership</option>
-                <option>Community programme</option>
-                <option>Volunteering</option>
-                <option>Other</option>
-              </select></div>
-            <div class="field full"><label for="message">Message</label><textarea id="message" name="message" required
-                placeholder="Tell us how we can help"></textarea></div>
-            <div class="field full"><button class="btn" type="submit">Prepare Email Enquiry</button>
-              <p class="form-note" id="formNote">This demo form opens your email application. Add the organisation's
-                official email address in the HTML before publishing.</p>
-            </div>
-          </div>
-        </form>
+        <div class="collab-card-grid">
+          <article class="collab-card">
+            <span class="icon" aria-hidden="true">▤</span>
+            <h3>Education & child development</h3>
+            <p>Explore supplemental learning, reading, numeracy, creativity, and positive group activities for children.</p>
+          </article>
+          <article class="collab-card">
+            <span class="icon" aria-hidden="true">✳</span>
+            <h3>Yoga & wellness</h3>
+            <p>Consider accessible movement, breathing, relaxation, and everyday habits that support wellbeing.</p>
+          </article>
+          <article class="collab-card">
+            <span class="icon" aria-hidden="true">◎</span>
+            <h3>Community participation</h3>
+            <p>Support welcoming opportunities for residents to connect, share ideas, and participate in local activities.</p>
+          </article>
+          <article class="collab-card">
+            <span class="icon" aria-hidden="true">↗</span>
+            <h3>Citizen facilitation</h3>
+            <p>Help people navigate publicly available scheme information and official application or grievance channels.</p>
+          </article>
+        </div>
       </div>
     </section>
+    <section id="ways-to-collaborate">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Ways to collaborate</p>
+          <h2>Different partners can contribute in different ways.</h2>
+          <p>The right scope depends on community consultation, partner priorities, organisational capacity, and any
+            applicable requirements. Possible contributions to discuss include:</p>
+        </div>
+        <div class="collab-ways-grid">
+          <article class="collab-way">
+            <h3>Programme resources</h3>
+            <p>Learning materials, books, sports or activity supplies, and other resources identified as useful and
+              appropriate for a locally agreed activity.</p>
+          </article>
+          <article class="collab-way">
+            <h3>Skills and knowledge</h3>
+            <p>Voluntary or professional guidance in education, wellness, safeguarding, monitoring, communications, or
+              organisational development.</p>
+          </article>
+          <article class="collab-way">
+            <h3>Planning and learning</h3>
+            <p>Support to clarify intended outcomes, practical indicators, recordkeeping, community feedback, and
+              reflection on what is working.</p>
+          </article>
+          <article class="collab-way">
+            <h3>Financial support</h3>
+            <p>Any funding discussion would require due diligence, an agreed scope and budget, and confirmation of
+              applicable legal and eligibility requirements before commitments are made.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="collab-process" id="responsible-start">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">A responsible starting point</p>
+          <h2>Move from conversation to clear expectations.</h2>
+          <p>These steps describe a possible collaboration process. They do not represent a current agreement or guarantee
+            that a proposed activity will proceed.</p>
+        </div>
+        <div class="collab-step-grid">
+          <article class="collab-step">
+            <span class="collab-step-number">01 / LISTEN</span>
+            <h3>Understand the context</h3>
+            <p>Discuss community priorities, existing services, local stakeholders, and the partner's areas of interest.</p>
+          </article>
+          <article class="collab-step">
+            <span class="collab-step-number">02 / SHAPE</span>
+            <h3>Define a realistic scope</h3>
+            <p>Agree what could be explored, who would be involved, where activities might take place, and what resources
+              may be needed.</p>
+          </article>
+          <article class="collab-step">
+            <span class="collab-step-number">03 / AGREE</span>
+            <h3>Document responsibilities</h3>
+            <p>Before starting, clarify roles, permissions, safeguards, budget, timelines, reporting, and any required
+              approvals in writing.</p>
+          </article>
+          <article class="collab-step">
+            <span class="collab-step-number">04 / REVIEW</span>
+            <h3>Learn and communicate</h3>
+            <p>Review progress with relevant stakeholders and share only accurate updates supported by appropriate
+              records.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="trust-accountability">
+      <div class="container collab-accountability-grid">
+        <div class="collab-accountability">
+          <p class="kicker">Trust & accountability</p>
+          <h2>Clarity before commitments. Evidence before claims.</h2>
+          <p>Responsible collaboration means being open about what is planned, what is approved, what has taken place, and
+            what has been learned. No partnership or programme result should be described as confirmed until it is
+            verified.</p>
+          <div class="collab-notice"><strong>Important:</strong> The Utkarsha Gopalpur initiative described above is
+            proposed. Its proposed activities and scale should not be presented as completed results unless implementation
+            is verified.</div>
+        </div>
+        <ul class="collab-checklist">
+          <li>Verify organisational particulars, registrations, eligibility, and due-diligence documents relevant to the
+            proposed collaboration.</li>
+          <li>Agree scope, responsibilities, permissions, budget, timelines, and reporting expectations before activities
+            or funding begin.</li>
+          <li>Set appropriate safeguarding and privacy practices, especially where children or personal information may
+            be involved.</li>
+          <li>Keep proportionate records and communicate activities and outcomes accurately, including limitations and
+            lessons learned.</li>
+          <li>Respect the roles of schools, healthcare providers, government departments, and other local institutions.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="collab-questions" id="useful-to-know">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Useful to know</p>
+          <h2>Questions partners may have.</h2>
+        </div>
+        <div class="collab-question-grid">
+          <details class="collab-details">
+            <summary>Is a programme or funding partnership already confirmed?</summary>
+            <p>This page does not announce a confirmed partnership or funding arrangement. Any future relationship would
+              be communicated only after it has been formally agreed.</p>
+          </details>
+          <details class="collab-details">
+            <summary>Can a partner propose a specific area of support?</summary>
+            <p>Yes. A partner can raise an area of interest for discussion. Any proposal would still need to be assessed
+              for community relevance, feasibility, permissions, safeguards, and applicable requirements.</p>
+          </details>
+          <details class="collab-details">
+            <summary>Does this website accept applications or donations online?</summary>
+            <p>No. This is an informational website only. It has no application, payment, or donation processing system.</p>
+          </details>
+          <details class="collab-details">
+            <summary>How can an organisation start a conversation?</summary>
+            <p>Use Atal Yuva Bahini's approved public communication channels. Contact details and communication processes
+              should be verified before publication.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="collab-closing">
+      <div class="container">
+        <h2>Interested in exploring a thoughtful collaboration?</h2>
+        <p>Start with shared community priorities and clear expectations. A discussion does not create a funding or
+          partnership commitment.</p>
+      </div>
+    </section>
+
   </main>
   <footer>
     <div class="container">
@@ -1095,14 +1345,15 @@
               href="#initiatives">Initiatives</a><a href="#approach">Our Approach</a></div>
         </div>
         <div>
-          <h4>Connect</h4>
-          <div class="footer-links"><a href="#contact">Contact Us</a><a href="#contact">Partnership Enquiries</a></div>
+          <h4>Collaborate</h4>
+          <div class="footer-links"><a href="#collaboration">CSR & Philanthropic Collaboration</a><a
+              href="#useful-to-know">Useful to Know</a></div>
         </div>
       </div>
       <div class="copyright"><span>© <span id="year"></span> Atal Yuva Bahini. All rights reserved.</span><span>Built
           around service, dignity, and community.</span></div>
-      <p class="disclaimer">Before publishing, replace placeholder contact details, confirm the organisation's legal
-        particulars and policies, use approved brand assets, and verify all programme status and partnership claims.
+      <p class="disclaimer">Before publishing, confirm the organisation's legal particulars and policies, use approved
+        brand assets, and verify all programme status and partnership claims.
         Images are illustrative and should not be represented as photographs of actual programme participants or
         centres.</p>
     </div>
@@ -1113,7 +1364,6 @@
     menuBtn.addEventListener('click', () => { const open = navWrap.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', String(open)); menuBtn.textContent = open ? '✕' : '☰'; });
     document.querySelectorAll('#mainNav a').forEach(a => a.addEventListener('click', () => { navWrap.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.textContent = '☰'; }));
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('contactForm').addEventListener('submit', function (e) { e.preventDefault(); const officialEmail = ''; if (!officialEmail) { document.getElementById('formNote').textContent = 'Demo only: set the officialEmail variable in this HTML to the organisation’s approved email address before publishing. No message has been sent.'; return; } const d = new FormData(this); const subject = encodeURIComponent('Website enquiry: ' + d.get('enquiry')); const body = encodeURIComponent('Name: ' + d.get('name') + '\nOrganisation: ' + d.get('organisation') + '\nEmail: ' + d.get('email') + '\nEnquiry: ' + d.get('enquiry') + '\n\n' + d.get('message')); window.location.href = 'mailto:' + officialEmail + '?subject=' + subject + '&body=' + body; });
   </script>
 </body>
 
