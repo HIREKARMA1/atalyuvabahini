@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Atal Yuva Bahini works towards inclusive community development through education, wellness, participation and citizen facilitation." />
+  <title>Atal Yuva Bahini | Seva O Samarpana</title>
+  <style>
+    :root {
+      --navy: #153b70;
+      --blue: #245b9b;
+      --gold: #f1c75b;
+      --ink: #182638;
+      --muted: #627084;
+      --pale: #f3f6fa;
+      --white: #fff;
+      --line: #e2e8f0;
+      --green: #2c7558
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      line-height: 1.65;
+      background: #fff
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .container {
+      width: min(1140px, 92%);
+      margin: auto
+    }
+
+    .topbar {
+      background: var(--navy);
+      color: #e9eff8;
+      font-size: .86rem;
+      padding: 8px 0
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      z-index: 10
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.15
+    }
+
+    .logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: var(--navy);
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: 1.2rem;
+      font-weight: 900;
+      letter-spacing: -1px
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: .7rem;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 5px
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: .92rem;
+      font-weight: 650;
+      color: #3c4a5d
+    }
+
+    nav a:hover {
+      color: var(--blue)
+    }
+
+    .nav-cta,
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 19px;
+      border-radius: 9px;
+      background: var(--gold);
+      color: #19365b;
+      font-weight: 800;
+      border: 0;
+      cursor: pointer;
+      transition: .2s
+    }
+
+    .nav-cta:hover,
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(.98)
+    }
+
+    .menu-btn {
+      display: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 1.2rem
+    }
+
+    .hero {
+      background: linear-gradient(115deg, rgba(12, 43, 83, .96), rgba(27, 76, 128, .87)), url('https://images.unsplash.com/photo-1529154036614-a60975f5c760?auto=format&fit=crop&w=2000&q=85') center/cover;
+      color: #fff;
+      padding: 100px 0 88px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border: 1px solid rgba(255, 255, 255, .15);
+      border-radius: 50%;
+      right: -80px;
+      bottom: -180px;
+      box-shadow: 0 0 0 42px rgba(255, 255, 255, .035), 0 0 0 90px rgba(255, 255, 255, .025)
+    }
+
+    .eyebrow {
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-weight: 800;
+      color: var(--gold);
+      margin: 0 0 18px
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4.6rem);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      max-width: 790px;
+      margin: 0 0 22px
+    }
+
+    .hero p.lead {
+      font-size: 1.12rem;
+      color: #e2ebf7;
+      max-width: 680px;
+      margin: 0 0 30px
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 18px;
+      border: 1px solid rgba(255, 255, 255, .6);
+      border-radius: 9px;
+      color: #fff;
+      font-weight: 750
+    }
+
+    .hero-note {
+      margin-top: 45px;
+      color: #d0dced;
+      font-size: .86rem
+    }
+
+    section {
+      padding: 82px 0
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 38px
+    }
+
+    .section-head.center {
+      text-align: center;
+      margin: 0 auto 42px
+    }
+
+    .kicker {
+      font-size: .76rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-weight: 850;
+      margin: 0 0 10px
+    }
+
+    .section-head h2,
+    .about-copy h2 {
+      font-size: clamp(2rem, 3.4vw, 3rem);
+      letter-spacing: -.035em;
+      line-height: 1.16;
+      color: var(--navy);
+      margin: 0 0 15px
+    }
+
+    .section-head p,
+    .about-copy p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 1.02rem
+    }
+
+    .values-strip {
+      background: #fff;
+      position: relative;
+      margin-top: -28px;
+      z-index: 2
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 16px 45px rgba(17, 45, 80, .08);
+      overflow: hidden
+    }
+
+    .stat {
+      padding: 25px 20px;
+      text-align: center;
+      border-right: 1px solid var(--line)
+    }
+
+    .stat:last-child {
+      border: 0
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.05rem;
+      color: var(--navy)
+    }
+
+    .stat span {
+      font-size: .84rem;
+      color: var(--muted)
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center
+    }
+
+    .photo-stack {
+      position: relative;
+      padding: 0 28px 28px 0
+    }
+
+    .photo-stack img {
+      display: block;
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      border-radius: 18px
+    }
+
+    .photo-stack:after {
+      content: "Seva O Samarpana";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 850;
+      padding: 17px 23px;
+      border-radius: 12px;
+      box-shadow: 0 12px 28px #0001
+    }
+
+    .about-copy h2 {
+      margin-bottom: 18px
+    }
+
+    .about-copy p {
+      margin-bottom: 16px
+    }
+
+    .value-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 24px
+    }
+
+    .value-item {
+      border-left: 3px solid var(--gold);
+      padding-left: 12px
+    }
+
+    .value-item strong {
+      display: block;
+      color: var(--navy)
+    }
+
+    .value-item span {
+      font-size: .87rem;
+      color: var(--muted)
+    }
+
+    .focus {
+      background: var(--pale)
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: .2s
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 35px rgba(21, 59, 112, .1)
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block
+    }
+
+    .card-body {
+      padding: 22px
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: #eaf1fa;
+      color: var(--navy);
+      border-radius: 11px;
+      font-size: 1.2rem;
+      margin-top: -43px;
+      position: relative;
+      border: 4px solid #fff
+    }
+
+    .card h3 {
+      font-size: 1.12rem;
+      color: var(--navy);
+      margin: 13px 0 8px
+    }
+
+    .card p {
+      font-size: .92rem;
+      color: var(--muted);
+      margin: 0
+    }
+
+    .initiative-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center
+    }
+
+    .initiative-grid img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 18px
+    }
+
+    .initiative-copy h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: var(--navy);
+      line-height: 1.15;
+      letter-spacing: -.035em;
+      margin: 0 0 15px
+    }
+
+    .initiative-copy p {
+      color: var(--muted)
+    }
+
+    .pill {
+      display: inline-block;
+      background: #fff4ce;
+      color: #765714;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 15px
+    }
+
+    .initiative-points {
+      padding: 0;
+      list-style: none;
+      margin: 22px 0
+    }
+
+    .initiative-points li {
+      padding: 8px 0 8px 28px;
+      position: relative;
+      color: #39495d
+    }
+
+    .initiative-points li:before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      color: var(--green);
+      font-weight: 900
+    }
+
+    .principles {
+      background: var(--navy);
+      color: #fff
+    }
+
+    .principles .section-head h2 {
+      color: #fff
+    }
+
+    .principles .section-head p {
+      color: #d5e1f0
+    }
+
+    .principle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px
+    }
+
+    .principle {
+      border: 1px solid rgba(255, 255, 255, .17);
+      padding: 25px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .045)
+    }
+
+    .principle .number {
+      color: var(--gold);
+      font-size: .8rem;
+      letter-spacing: .1em;
+      font-weight: 850
+    }
+
+    .principle h3 {
+      margin: 10px 0;
+      color: #fff
+    }
+
+    .principle p {
+      color: #d3dfed;
+      font-size: .92rem;
+      margin: 0
+    }
+
+    .partner-box {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 40px;
+      align-items: center;
+      background: #f6f8fb;
+      border: 1px solid var(--line);
+      padding: 42px;
+      border-radius: 18px
+    }
+
+    .partner-box h2 {
+      color: var(--navy);
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 13px
+    }
+
+    .partner-box p {
+      color: var(--muted);
+      margin: 0
+    }
+
+    .partner-links {
+      display: flex;
+      flex-direction: column;
+      gap: 11px
+    }
+
+    .partner-links a {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 12px 15px;
+      font-weight: 750;
+      color: var(--navy)
+    }
+
+    .contact {
+      background: var(--pale)
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 50px
+    }
+
+    .contact-info h2 {
+      font-size: 2.6rem;
+      line-height: 1.12;
+      color: var(--navy);
+      margin: 0 0 18px
+    }
+
+    .contact-info p {
+      color: var(--muted)
+    }
+
+    .contact-line {
+      margin-top: 20px
+    }
+
+    .contact-line strong {
+      display: block;
+      color: var(--navy)
+    }
+
+    .contact-line span {
+      color: var(--muted);
+      font-size: .94rem
+    }
+
+    .contact-form {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(17, 45, 80, .04)
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px
+    }
+
+    .field.full {
+      grid-column: 1/-1
+    }
+
+    .field label {
+      font-size: .84rem;
+      font-weight: 750;
+      color: #334155
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #d6dee8;
+      border-radius: 8px;
+      font: inherit;
+      color: var(--ink);
+      background: #fff
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical
+    }
+
+    .form-note {
+      font-size: .78rem;
+      color: var(--muted);
+      margin: 13px 0 0
+    }
+
+    footer {
+      background: #0e2c52;
+      color: #d5e0ed;
+      padding: 42px 0 20px
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr .7fr;
+      gap: 45px;
+      padding-bottom: 32px
+    }
+
+    .footer-brand {
+      color: #fff;
+      font-weight: 850;
+      font-size: 1.15rem
+    }
+
+    .footer-grid p {
+      color: #c0cddd;
+      font-size: .9rem;
+      max-width: 370px
+    }
+
+    .footer-grid h4 {
+      color: #fff;
+      margin: 0 0 12px
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 8px;
+      font-size: .9rem
+    }
+
+    .footer-links a:hover {
+      color: var(--gold)
+    }
+
+    .copyright {
+      border-top: 1px solid #2a4667;
+      padding-top: 17px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      font-size: .8rem;
+      color: #aebfd3
+    }
+
+    .disclaimer {
+      font-size: .78rem;
+      color: #aebfd3;
+      max-width: 760px;
+      margin-top: 12px
+    }
+
+    @media(max-width:950px) {
+      nav {
+        gap: 14px
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .about-grid,
+      .initiative-grid {
+        gap: 35px
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .stat:nth-child(2) {
+        border-right: 0
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line)
+      }
+
+      .principle-grid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:720px) {
+      .topbar .container {
+        justify-content: center;
+        text-align: center
+      }
+
+      .nav {
+        min-height: 70px
+      }
+
+      .menu-btn {
+        display: block
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 20px 5%;
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        align-items: stretch
+      }
+
+      .nav.open nav {
+        display: flex
+      }
+
+      .nav-cta {
+        text-align: center
+      }
+
+      .hero {
+        padding: 76px 0 70px
+      }
+
+      .hero h1 {
+        font-size: 2.7rem
+      }
+
+      .hero p.lead {
+        font-size: 1rem
+      }
+
+      section {
+        padding: 62px 0
+      }
+
+      .about-grid,
+      .initiative-grid,
+      .contact-grid,
+      .partner-box {
+        grid-template-columns: 1fr
+      }
+
+      .photo-stack img {
+        height: 330px
+      }
+
+      .initiative-grid img {
+        height: 300px
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .principle-grid {
+        grid-template-columns: 1fr
+      }
+
+      .partner-box {
+        padding: 27px
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px
+      }
+
+      .footer-grid>div:first-child {
+        grid-column: 1/-1
+      }
+    }
+
+    @media(max-width:460px) {
+      .cards {
+        grid-template-columns: 1fr
+      }
+
+      .value-list {
+        grid-template-columns: 1fr
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .stat {
+        padding: 19px 10px
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr
+      }
+
+      .field.full {
+        grid-column: auto
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr
+      }
+
+      .footer-grid>div:first-child {
+        grid-column: auto
+      }
+
+      .hero h1 {
+        font-size: 2.35rem
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container"><span>Ganjam District, Odisha, India</span><span>Seva O Samarpana · Service and
+        Dedication</span></div>
+  </div>
+  <header>
+    <div class="container nav" id="navWrap">
+      <a class="brand" href="#home" aria-label="Atal Yuva Bahini home"><span class="logo">AYB</span><span>ATAL YUVA
+          BAHINI<small>Seva O Samarpana</small></span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav id="mainNav" aria-label="Main navigation"><a href="#about">About</a><a href="#focus">Our Focus</a><a
+          href="#initiatives">Initiatives</a><a href="#approach">Our Approach</a><a href="#contact" class="nav-cta">Get
+          in Touch</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <p class="eyebrow">Service · Dedication · Community</p>
+        <h1>Building stronger communities. Nurturing brighter futures.</h1>
+        <p class="lead">Atal Yuva Bahini works towards inclusive community development by encouraging learning,
+          wellness, local participation, and access to information about public services.</p>
+        <div class="hero-actions"><a class="btn" href="#about">Discover Our Mission</a><a class="btn-outline"
+            href="#initiatives">Explore Our Initiatives</a></div>
+        <p class="hero-note">Rooted in community. Guided by service. Focused on meaningful progress.</p>
+      </div>
+    </section>
+    <div class="values-strip">
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><strong>Community First</strong><span>Local needs guide our approach</span></div>
+          <div class="stat"><strong>Inclusive Learning</strong><span>Opportunities to learn and grow</span></div>
+          <div class="stat"><strong>Wellbeing</strong><span>Healthy habits and participation</span></div>
+          <div class="stat"><strong>Accountability</strong><span>Responsible, honest reporting</span></div>
+        </div>
+      </div>
+    </div>
+    <section id="about">
+      <div class="container about-grid">
+        <div class="photo-stack"><img
+            src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1100&q=85"
+            alt="People gathered for a community activity" loading="lazy"></div>
+        <div class="about-copy">
+          <p class="kicker">Who We Are</p>
+          <h2>Local action. Shared responsibility. Lasting possibility.</h2>
+          <p>Atal Yuva Bahini is committed to community-centred initiatives that bring people together around education,
+            wellness, and practical citizen facilitation.</p>
+          <p>We believe meaningful development starts by listening to people, respecting local institutions, and
+            creating welcoming spaces where communities can learn, participate, and find guidance.</p>
+          <p>Our work is guided by <strong>Seva O Samarpana</strong> — a spirit of service and dedication that places
+            dignity, inclusion, and responsibility at the heart of community engagement.</p>
+          <div class="value-list">
+            <div class="value-item"><strong>Our Vision</strong><span>Communities with access to learning, wellbeing, and
+                support.</span></div>
+            <div class="value-item"><strong>Our Mission</strong><span>Develop practical, locally grounded community
+                initiatives.</span></div>
+            <div class="value-item"><strong>Inclusion</strong><span>Make participation welcoming and respectful.</span>
+            </div>
+            <div class="value-item"><strong>Integrity</strong><span>Be honest about actions, learning, and
+                results.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="focus" id="focus">
+      <div class="container">
+        <div class="section-head center">
+          <p class="kicker">Our Focus Areas</p>
+          <h2>Connected support for community life</h2>
+          <p>Community needs are connected. Our approach brings complementary activities together while respecting the
+            role of schools, healthcare providers, and public authorities.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><img
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80"
+              alt="Children learning together" loading="lazy">
+            <div class="card-body"><span class="icon">▤</span>
+              <h3>Education & Child Development</h3>
+              <p>Supporting supplemental learning, reading, numeracy, creativity, and positive group activities for
+                children.</p>
+            </div>
+          </article>
+          <article class="card"><img
+              src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=700&q=80"
+              alt="Yoga and wellness practice" loading="lazy">
+            <div class="card-body"><span class="icon">✳</span>
+              <h3>Yoga & Wellness</h3>
+              <p>Encouraging accessible movement, breathing, relaxation, and everyday habits that support wellbeing.</p>
+            </div>
+          </article>
+          <article class="card"><img
+              src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=700&q=80"
+              alt="Community members participating together" loading="lazy">
+            <div class="card-body"><span class="icon">◎</span>
+              <h3>Community Participation</h3>
+              <p>Creating opportunities for residents to connect, share ideas, and take part in local activities.</p>
+            </div>
+          </article>
+          <article class="card"><img
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80"
+              alt="People reviewing documents and information" loading="lazy">
+            <div class="card-body"><span class="icon">↗</span>
+              <h3>Citizen Facilitation</h3>
+              <p>Helping residents understand publicly available scheme information, application steps, and official
+                grievance channels.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="initiatives">
+      <div class="container initiative-grid">
+        <div><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1100&q=85"
+            alt="Community members coming together" loading="lazy"></div>
+        <div class="initiative-copy"><span class="pill">Featured initiative · Proposed</span>
+          <p class="kicker">Community Development</p>
+          <h2>Utkarsha Gopalpur</h2>
+          <p>An integrated community-development concept proposed for Gopalpur Constituency, Ganjam District, Odisha. It
+            brings supplemental education, yoga and wellness, and citizen facilitation into one community-centred model.
+          </p>
+          <ul class="initiative-points">
+            <li>Designed around locally accessible community spaces, subject to permission.</li>
+            <li>Three complementary roles: Yoga Trainer, Teachers, and Panchayat Relationship Coordinator.</li>
+            <li>Supports public-service navigation without replacing the authority of government departments.</li>
+            <li>Emphasises safeguarding, responsible recordkeeping, and learning from implementation.</li>
+          </ul>
+          <p><strong>Important:</strong> The proposal describes an intended programme model. Its proposed scale and
+            activities should not be presented as completed results unless implementation is verified.</p><a class="btn"
+            href="#contact">Discuss a Collaboration</a>
+        </div>
+      </div>
+    </section>
+    <section class="principles" id="approach">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Our Approach</p>
+          <h2>Trust is built through responsible action.</h2>
+          <p>We aim to keep community initiatives grounded, transparent, and respectful of the people and institutions
+            involved.</p>
+        </div>
+        <div class="principle-grid">
+          <article class="principle"><span class="number">01 / LISTEN</span>
+            <h3>Start with the community</h3>
+            <p>Understand local needs, consult relevant stakeholders, and adapt activities to the context of each
+              community.</p>
+          </article>
+          <article class="principle"><span class="number">02 / ACT</span>
+            <h3>Work within clear boundaries</h3>
+            <p>Seek permission for premises, clarify each role, safeguard children, and complement rather than replace
+              existing services.</p>
+          </article>
+          <article class="principle"><span class="number">03 / LEARN</span>
+            <h3>Record and improve</h3>
+            <p>Keep appropriate records of activities, reflect on challenges, protect personal information, and report
+              only what evidence supports.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="partner-box">
+          <div>
+            <p class="kicker">Work With Us</p>
+            <h2>Good work grows through meaningful collaboration.</h2>
+            <p>We welcome conversations with community stakeholders, educational institutions, CSR teams, philanthropic
+              organisations, and others interested in inclusive community development. Any partnership or funding
+              relationship will be described publicly only once confirmed.</p>
+          </div>
+          <div class="partner-links"><a href="#contact">CSR & Philanthropic Collaboration ↗</a><a
+              href="#contact">Institutional Partnerships ↗</a><a href="#contact">Community Engagement ↗</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="kicker">Contact Us</p>
+          <h2>Let's start a conversation.</h2>
+          <p>Have a question, want to explore a collaboration, or learn more about our work? Reach out using the contact
+            details approved by the organisation.</p>
+          <div class="contact-line"><strong>Organisation</strong><span>Atal Yuva Bahini</span></div>
+          <div class="contact-line"><strong>Location</strong><span>Ganjam District, Odisha, India</span></div>
+          <div class="contact-line"><strong>Email</strong><span>[Add official email address]</span></div>
+          <div class="contact-line"><strong>Phone</strong><span>[Add official contact number]</span></div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-grid">
+            <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name"
+                required placeholder="Your name"></div>
+            <div class="field"><label for="organisation">Organisation (optional)</label><input id="organisation"
+                name="organisation" placeholder="Organisation name"></div>
+            <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email"
+                autocomplete="email" required placeholder="you@example.com"></div>
+            <div class="field"><label for="enquiry">Type of enquiry</label><select id="enquiry" name="enquiry" required>
+                <option value="">Choose one</option>
+                <option>General enquiry</option>
+                <option>CSR or philanthropic collaboration</option>
+                <option>Institutional partnership</option>
+                <option>Community programme</option>
+                <option>Volunteering</option>
+                <option>Other</option>
+              </select></div>
+            <div class="field full"><label for="message">Message</label><textarea id="message" name="message" required
+                placeholder="Tell us how we can help"></textarea></div>
+            <div class="field full"><button class="btn" type="submit">Prepare Email Enquiry</button>
+              <p class="form-note" id="formNote">This demo form opens your email application. Add the organisation's
+                official email address in the HTML before publishing.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">ATAL YUVA BAHINI</div>
+          <p>Working towards inclusive community development through education, wellness, participation, and citizen
+            facilitation.</p>
+          <p><strong>Seva O Samarpana</strong> — Service and Dedication.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links"><a href="#about">About Us</a><a href="#focus">Our Focus</a><a
+              href="#initiatives">Initiatives</a><a href="#approach">Our Approach</a></div>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <div class="footer-links"><a href="#contact">Contact Us</a><a href="#contact">Partnership Enquiries</a></div>
+        </div>
+      </div>
+      <div class="copyright"><span>© <span id="year"></span> Atal Yuva Bahini. All rights reserved.</span><span>Built
+          around service, dignity, and community.</span></div>
+      <p class="disclaimer">Before publishing, replace placeholder contact details, confirm the organisation's legal
+        particulars and policies, use approved brand assets, and verify all programme status and partnership claims.
+        Images are illustrative and should not be represented as photographs of actual programme participants or
+        centres.</p>
+    </div>
+  </footer>
+  <script>
+    const navWrap = document.getElementById('navWrap');
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn.addEventListener('click', () => { const open = navWrap.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', String(open)); menuBtn.textContent = open ? '✕' : '☰'; });
+    document.querySelectorAll('#mainNav a').forEach(a => a.addEventListener('click', () => { navWrap.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.textContent = '☰'; }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit', function (e) { e.preventDefault(); const officialEmail = ''; if (!officialEmail) { document.getElementById('formNote').textContent = 'Demo only: set the officialEmail variable in this HTML to the organisation’s approved email address before publishing. No message has been sent.'; return; } const d = new FormData(this); const subject = encodeURIComponent('Website enquiry: ' + d.get('enquiry')); const body = encodeURIComponent('Name: ' + d.get('name') + '\nOrganisation: ' + d.get('organisation') + '\nEmail: ' + d.get('email') + '\nEnquiry: ' + d.get('enquiry') + '\n\n' + d.get('message')); window.location.href = 'mailto:' + officialEmail + '?subject=' + subject + '&body=' + body; });
+  </script>
+</body>
+
+</html>
